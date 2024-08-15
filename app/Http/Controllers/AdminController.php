@@ -41,9 +41,10 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Category Added Successfully');
     }
 
-    public function cat_delete($id){
+    public function cat_delete($id)
+    {
         $data=Category::find($id);
         $data->delete();
-        return redirect()->back();
+        return redirect()->back()->with('message','Category Deleted Successfully');
     }
 }
