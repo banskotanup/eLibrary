@@ -64,10 +64,14 @@
                   <table class="center">
                     <tr>
                       <th>Category Name</th>
+                      <th>Action</th>
                     </tr>
                     @foreach($data as $data)
                     <tr>
                       <td>{{$data->cat_title}}</td>
+                      <td>
+                        <a class="btn btn-danger" href="{{url('cat_delete',$data->id)}}">Delete</a>
+                      </td>
                     </tr>
                     @endforeach
                   </table>
