@@ -20,3 +20,4 @@ route::get('/home',[AdminController::class, 'index']);
 route::get('/category_page',[AdminController::class, 'category_page']);
 route::post('/add_category',[AdminController::class, 'add_category']);
 route::get('/cat_delete/{id}',[AdminController::class, 'cat_delete']);
+route::get('/edit_category/{id}',[AdminController::class, 'edit_category']);
