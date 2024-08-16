@@ -2,6 +2,7 @@
 <html>
   <head> 
     @include('admin.css')
+    @include('admin.custom_css')
   </head>
   <body>
     @include('admin.header')
