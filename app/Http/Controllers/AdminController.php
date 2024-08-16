@@ -50,8 +50,7 @@ class AdminController extends Controller
 
     public function edit_category($id)
     {
-        $data = Category::find($id);
-
-        return view('admin.editCategory',compact('data'));
+        $data = category::find($id);
+        return view('admin.edit_category',compact('data'));
     }
 }

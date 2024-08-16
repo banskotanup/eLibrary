@@ -9,7 +9,6 @@
       <!-- Sidebar Navigation-->
       @include('admin.sidebar')
       <!-- Sidebar Navigation end-->
-      @include('admin.body')
         @include('admin.footer')
   </body>
 </html>
