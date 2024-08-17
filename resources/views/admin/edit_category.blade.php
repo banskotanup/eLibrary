@@ -2,6 +2,7 @@
 <html>
   <head> 
     @include('admin.css')
+    @include('admin.custom_css')
     <style type="text/css">
       .div_deg{
         text-align: center;
