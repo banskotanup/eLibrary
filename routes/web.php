@@ -25,3 +25,6 @@ route::post('/update_category/{id}',[AdminController::class, 'update_category'])
 
 route::get('/add_book',[AdminController::class, 'add_book']);
 route::post('/store_book',[AdminController::class, 'store_book']);
+
+route::get('/show_book',[AdminController::class, 'show_book']);
+route::get('/book_delete/{id}',[AdminController::class, 'book_delete']);

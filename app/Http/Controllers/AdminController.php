@@ -89,11 +89,24 @@ class AdminController extends Controller
         if($auther_image)  
         {
             $auther_image_name = time().'.'.$auther_image->getClientOriginalExtension();
-            $request->auther_img->move('book',$auther_image_name);
+            $request->auther_img->move('auther',$auther_image_name);
             $data->auther_img = $auther_image_name;
         }
         $data->save();
         return redirect()->back()->with('message','Book Added Successfully');
+    }
+
+    public function show_book()
+    {
+        $book=Book::all();
+        return view('admin.show_book',compact('book'));
+    }
+
+    public function book_delete($id)
+    {
+        $data= Book::find($id);
+        $data->delete();
+        return redirect()->back()->with('message', 'Book Deleted Successfully');
     }
 }
 
