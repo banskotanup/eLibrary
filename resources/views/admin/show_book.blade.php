@@ -8,22 +8,24 @@
         .table_center{
             text-align: center;
             margin: auto;
-            border: 1px solid yellowgreen;
+            width: 100%;
+            border: 1px solid white;
             margin-top: 50px:
         }
 
         th{
             background-color: skyblue;
+            text-align: center;
             padding: 10px;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: bold;
             color: black;
-            border: 1px solid yellowgreen;
+            border: 1px solid white;
         }
 
         td{
             color: white;
-            border: 1px solid yellowgreen;
+            border: 1px solid white;
 
         }
 

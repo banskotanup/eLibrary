@@ -25,10 +25,17 @@
       th{
         background-color: skyblue;
         padding: 10px;
+        color: black;
+        border: 1px solid white;
       }
       tr{
         border: 1px solid white;
         padding: 10px;
+        color: white;
+        border: 1px solid white;
+      }
+      td{
+        border: 1px solid white;
       }
     </style>
   </head>
