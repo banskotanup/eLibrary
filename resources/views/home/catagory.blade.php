@@ -13,7 +13,7 @@
               <div class="col-lg-2 col-sm-6">
                 <div class="item">
                   <div class="icon">
-                    <img src="assets/images/icon-01.png" alt="">
+                    <img src="/assets/images/icon-01.png" alt="">
                   </div>
                   <h4>Motivational</h4>
                   
@@ -22,7 +22,7 @@
               <div class="col-lg-2 col-sm-6">
                 <div class="item">
                   <div class="icon">
-                    <img src="assets/images/icon-02.png" alt="">
+                    <img src="/assets/images/icon-02.png" alt="">
                   </div>
                   <h4>Money</h4>
                   
@@ -31,7 +31,7 @@
               <div class="col-lg-2 col-sm-6">
                 <div class="item">
                   <div class="icon">
-                    <img src="assets/images/icon-03.png" alt="">
+                    <img src="/assets/images/icon-03.png" alt="">
                   </div>
                   <h4>Psychological</h4>
                   
@@ -40,7 +40,7 @@
               <div class="col-lg-2 col-sm-6">
                 <div class="item">
                   <div class="icon">
-                    <img src="assets/images/icon-04.png" alt="">
+                    <img src="/assets/images/icon-04.png" alt="">
                   </div>
                   <h4>Story</h4>
                   
@@ -49,7 +49,7 @@
               <div class="col-lg-2 col-sm-6">
                 <div class="item">
                   <div class="icon">
-                    <img src="assets/images/icon-05.png" alt="">
+                    <img src="/assets/images/icon-05.png" alt="">
                   </div>
                   <h4>Fictional</h4>
                   
@@ -58,7 +58,7 @@
               <div class="col-lg-2 col-sm-6">
                 <div class="item">
                   <div class="icon">
-                    <img src="assets/images/icon-06.png" alt="">
+                    <img src="/assets/images/icon-06.png" alt="">
                   </div>
                   <h4>Romance</h4>
                   

@@ -23,12 +23,12 @@
               <div class="col-lg-6 currently-market-item all msc">
                 <div class="item">
                   <div class="left-image">
-                    <img src="book/{{$data->book_img}}" alt="" style="border-radius: 20px; min-width: 195px;">
+                    <img src="/book/{{$data->book_img}}" alt="" style="border-radius: 20px; min-width: 195px;">
                   </div>
                   <div class="right-content">
                     <h4>{{$data->title}}</h4>
                     <span class="author">
-                      <img src="auther/{{$data->auther_img}}" alt="" style="max-width: 50px; border-radius: 50%;">
+                      <img src="/auther/{{$data->auther_img}}" alt="" style="max-width: 50px; border-radius: 50%;">
                       <h6>{{$data->auther_name}}</h6>
                     </span>
                     <div class="line-dec"></div>

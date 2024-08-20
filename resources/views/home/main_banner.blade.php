@@ -26,10 +26,10 @@
         <div class="col-lg-5 offset-lg-1">
           <div class="">
             <div class="item">
-              <img src="assets/images/banner.png" alt="">
+              <img src="/assets/images/banner.png" alt="">
             </div>
             <div class="item">
-              <img src="assets/images/banner2.png" alt="">
+              <img src="/assets/images/banner2.png" alt="">
             </div>
           </div>
         </div>

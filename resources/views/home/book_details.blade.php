@@ -7,9 +7,7 @@
 
 <body>
     @include('home.header')
-    @include('home.main_banner')
-    @include('home.catagory')
-    @include('home.book')
+
     @include('home.footer')
 
   <!-- Scripts -->
