@@ -33,7 +33,7 @@
                         @if (Route::has('login'))
                             @auth
                             <div style="margin-top: 8px;">
-                              <div class="list-inline-item logout">
+                              <div class="dropdown bottom-right open">
                                 <a href="#dropDown" aria-expanded="false" data-toggle="collapse">
                                     <img
                                       src="/admin/img/avatar-7.jpg"
@@ -47,7 +47,7 @@
                                     id="dropDown"
                                     class="dropdown-menu dropdown-menu-end"
                                     aria-labelledby="navbarDropdownMenuAvatar"
-                                     style="background-color: #1d2129;"
+                                     style="background-color: #1d2129;left:auto!important; right:0!important;"
                                   >
                                     <li>
                                       <a class="dropdown-item" href="/user/profile">My profile</a>
