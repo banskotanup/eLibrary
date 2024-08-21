@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-authentication-card>
+        
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img style="height: 100px; width:100px;" src="/assets/images/loginlogo.png" alt="">
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -49,7 +50,7 @@
         </form>
         <div class="mt-4 text-center">
             <a class="text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
-                {{ __("Didn't have an account?")}} <strong>{!! "Register Now" !!}</strong> 
+                {{ __("Didn't have an account?")}} <span style="color: rgb(34, 34, 85);"><strong>{!! "Register Now" !!}</strong> </span>
             </a>
         </div>
     </x-authentication-card>
