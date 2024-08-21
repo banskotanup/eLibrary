@@ -28,6 +28,15 @@
             color: white;
             border: 1px solid white;
         }
+
+        .td_css{
+          padding: 10px;
+          margin: 10px;
+          margin-inline: 10px;
+          margin-bottom: 30px;
+
+        }
+        
     </style>
   </head>
   <body>
@@ -48,6 +57,7 @@
                     <th>Quantity</th>
                     <th>Book Image</th>
                     <th>Borrow Status</th>
+                    <th>Change Status</th>
                 </tr>
                 @foreach ($data as $data)
                 <tr>
@@ -59,7 +69,31 @@
                     <td>
                         <img style="height: 150px; width:90px;   display: block; margin-left: auto; margin-right: auto;" src="book/{{$data->book->book_img}}" alt="">
                     </td>
-                    <td>{{$data->status}}</td>
+                    <td>
+                      @if ($data->status == 'Approved')
+                          <span style="color: lightgreen">{{$data->status}}</span>    
+                      @endif
+                      @if ($data->status == 'Rejected')
+                          <span style="color: #D0342C">{{$data->status}}</span>    
+                      @endif
+                      @if ($data->status == 'Returned')
+                          <span style="color: yellow">{{$data->status}}</span>    
+                      @endif
+                      @if ($data->status == 'Applied')
+                          <span style="color: white">{{$data->status}}</span>    
+                      @endif
+                    </td>
+                    <td class="td_css">
+                      <div>
+                        <a style="height: 40px; width:90px;" href="{{url('approve_book',$data->id)}}" class="btn btn-warning">Approve</a>
+                      </div>
+                      <div style="margin-top:4px;">
+                        <a style="height: 40px; width:90px;" href="{{url('rejected_book',$data->id)}}" class="btn btn-danger">Reject</a>
+                      </div>
+                      <div style="margin-top:4px;">
+                        <a style="height: 40px; width:90px;" href="{{url('return_book',$data->id)}}" class="btn btn-info">Returned</a>
+                      </div>
+                    </td>
                 </tr>
                 @endforeach
             </table>

@@ -33,3 +33,6 @@ route::post('/update_book/{id}',[AdminController::class, 'update_book']);
 route::get('/book_details/{id}',[HomeController::class, 'book_details']);
 route::get('/borrow_books/{id}',[HomeController::class, 'borrow_books']);
 route::get('/borrow_request',[AdminController::class, 'borrow_request']);
+route::get('/approve_book/{id}',[AdminController::class, 'approve_book']);
+route::get('/return_book/{id}',[AdminController::class, 'return_book']);
+route::get('/rejected_book/{id}',[AdminController::class, 'rejected_book']);
