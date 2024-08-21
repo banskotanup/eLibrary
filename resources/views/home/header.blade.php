@@ -32,8 +32,32 @@
 
                         @if (Route::has('login'))
                             @auth
-                                <x-app-layout>
-                                </x-app-layout>
+                            <div style="margin-top: 8px;">
+                              <div class="list-inline-item logout">
+                                <a href="#dropDown" aria-expanded="false" data-toggle="collapse">
+                                    <img
+                                      src="/admin/img/avatar-7.jpg"
+                                      class="rounded-circle"
+                                      height="25"
+                                      alt="Black and White Portrait of a Man"
+                                      loading="lazy"
+                                    />
+                                  </a>
+                                  <ul
+                                    id="dropDown"
+                                    class="dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="navbarDropdownMenuAvatar"
+                                     style="background-color: #1d2129;"
+                                  >
+                                    <li>
+                                      <a class="dropdown-item" href="/user/profile">My profile</a>
+                                    </li>
+                                    <li>
+                                      <a class="dropdown-item" href="{{url('log_out')}}">Logout</a>
+                                    </li>
+                                  </ul>
+                              </div>
+                            </div>                                
                             @else
                                 <li><a href="{{ route('login') }}">Login</a></li>
                             @endauth

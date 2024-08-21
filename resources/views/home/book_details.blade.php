@@ -4,6 +4,7 @@
   <head>
     <base href="/public">
     @include('home.css')
+    @include('admin.custom_css')
     <style type="text/css">
     .close{
         align-items: flex-end;

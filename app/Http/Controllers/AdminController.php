@@ -8,6 +8,7 @@ use App\Models\Book;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Models\Borrow;
+use Illuminate\Http\RedirectResponse;
 
 class AdminController extends Controller
 {
@@ -195,6 +196,16 @@ class AdminController extends Controller
         $data->status = 'Rejected';
         $data->save();
         return redirect()->back();
+    }
+
+    public function log_out(Request $request): RedirectResponse
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        $request->session()->flush();
+ 
+        return redirect('/');
     }
 }
 

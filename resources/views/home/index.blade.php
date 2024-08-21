@@ -3,6 +3,7 @@
 
   <head>
     @include('home.css')
+    @include('admin.custom_css')
     <style type="text/css">
     .msg_center{
       text-align: center;
