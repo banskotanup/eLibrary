@@ -3,6 +3,13 @@
 
   <head>
     @include('home.css')
+    <style type="text/css">
+    .msg_center{
+      text-align: center;
+      margin-top: 50px;
+      padding: 10px;
+    }
+    </style>
   </head>
 
 <body>

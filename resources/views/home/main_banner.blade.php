@@ -1,12 +1,14 @@
 <!-- ***** Main Banner Area Start ***** -->
 <div class="main-banner">
     <div class="container">
-      @if(session()->has('message'))
-      <div class="alert alert-success">
-          {{session()->get('message')}}
-          <button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true">X</button>
+      <div class="msg_center">
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{session()->get('message')}}
+            <button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true">X</button>
+        </div>
+        @endif
       </div>
-      @endif
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="header-text">

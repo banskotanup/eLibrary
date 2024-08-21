@@ -36,7 +36,7 @@
                       Current Available<br><strong>{{$data->quantity}}</strong><br> 
                     </span>
                     <div class="text-button">
-                      <a href="{{url('book_details',$data->id)}}">View Item Details</a>
+                      <a href="{{url('book_details',$data->id)}}">View Book Details</a>
                     </div>
                   </br>
                     <div class="">
