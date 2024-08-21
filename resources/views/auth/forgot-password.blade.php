@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <img style="height: 100px; width:100px;" src="/assets/images/fp.png" alt="">
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">

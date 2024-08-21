@@ -7,7 +7,7 @@
     <style type="text/css">
         .table_center{
             text-align: center;
-            margin: auto;
+            margin: 1px;
             width: 100%;
             border: 1px solid white;
             margin-top: 50px:
@@ -16,7 +16,7 @@
         th{
             background-color: skyblue;
             text-align: center;
-            padding: 10px;
+            padding: auto;
             font-size: 15px;
             font-weight: bold;
             color: black;
@@ -26,6 +26,7 @@
         td{
             color: white;
             border: 1px solid white;
+            padding: 10px;
 
         }
 
@@ -41,8 +42,16 @@
         }
 
         .img_book{
-            width: 150px;
+            width: 80px;
             height: auto;
+        }
+
+        .td_css{
+          padding: 10px;
+          margin: auto;
+          margin-inline: 10px;
+          margin-bottom: 1px;
+
         }
     </style>
   </head>
@@ -72,8 +81,7 @@
                         <th>Category</th>
                         <th>Author Image</th>
                         <th>Book Image</th>
-                        <th>Delete</th>
-                        <th>Update</th>
+                        <th>Action</th>
                     </tr>
                     @foreach ($book as $book)
                     <tr>
@@ -90,11 +98,13 @@
                         <td>
                             <img class="img_book" src="book/{{$book->book_img}}" alt="">
                         </td>
-                        <td>
-                            <a onclick="confirmation(event)" href="{{url('book_delete',$book->id)}}" class="btn btn-danger">Delete</a>
-                        </td>
-                        <td>
-                            <a href="{{url('edit_book',$book->id)}}" class="btn btn-info">Update</a>
+                        <td class="td_css">
+                            <div>
+                                <a style="height: 40px; width:90px; href="{{url('edit_book',$book->id)}}" class="btn btn-info">Update</a>
+                            </div>
+                            <div style="margin-top:4px;">
+                                <a style="height: 40px; width:90px; onclick="confirmation(event)" href="{{url('book_delete',$book->id)}}" class="btn btn-danger">Delete</a>
+                            </div>
                         </td>
                     </tr>
                     @endforeach
