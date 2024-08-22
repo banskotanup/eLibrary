@@ -56,4 +56,22 @@ class HomeController extends Controller
         }
         
     }
+
+    // public function cancel_req($id)
+    // {
+    //     $data = Borrow::find($id);
+    //     $data->delete();
+    //     return redirect()->back()->with('message','Book borrow request cancelled successfully');
+    // }
+
+    public function cancel_req($id)
+    {
+        $data = Borrow::find($id);
+        $status = $data->status;
+        if ($status == 'Applied') {
+            $data->status = 'Cancelled';
+            $data->save();
+            return redirect()->back()->with('message','Book borrow request cancelled successfully');
+        }
+    }
 }

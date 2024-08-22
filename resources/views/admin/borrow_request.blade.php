@@ -82,17 +82,25 @@
                       @if ($data->status == 'Applied')
                           <span style="color: white">{{$data->status}}</span>    
                       @endif
+                      @if ($data->status == 'Cancelled')
+                          <span style="color: grey;">{{$data->status}}</span>    
+                      @endif
                     </td>
                     <td class="td_css">
-                      <div>
-                        <a style="height: 40px; width:90px;" href="{{url('approve_book',$data->id)}}" class="btn btn-warning">Approve</a>
-                      </div>
-                      <div style="margin-top:4px;">
-                        <a style="height: 40px; width:90px;" href="{{url('rejected_book',$data->id)}}" class="btn btn-danger">Reject</a>
-                      </div>
-                      <div style="margin-top:4px;">
-                        <a style="height: 40px; width:90px;" href="{{url('return_book',$data->id)}}" class="btn btn-info">Returned</a>
-                      </div>
+                      @if ($data->status == 'Applied')
+                        <div>
+                          <a style="height: 40px; width:90px;" href="{{url('approve_book',$data->id)}}" class="btn btn-warning">Approve</a>
+                        </div>
+                        <div style="margin-top:4px;">
+                          <a style="height: 40px; width:90px;" href="{{url('rejected_book',$data->id)}}" class="btn btn-danger">Reject</a>
+                        </div>
+                        <div style="margin-top:4px;">
+                          <a style="height: 40px; width:90px;" href="{{url('return_book',$data->id)}}" class="btn btn-info">Returned</a>
+                        </div>         
+                      @else
+                          <p style="color: white; font-weight: bold;">Not Allowed</p>
+                                
+                      @endif
                     </td>
                 </tr>
                 @endforeach

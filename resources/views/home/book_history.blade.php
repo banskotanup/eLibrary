@@ -35,7 +35,7 @@
 
     }
     .section-heading{
-        margin-top: 100px;
+        margin-top: 10px;
         margin-bottom: 20px;
     }
     </style>
@@ -46,6 +46,14 @@
     <div class="currently-market">
         <div class="container">
           <div class="row">
+            <div class="msg_center">
+                @if(session()->has('message'))
+                <div class="alert alert-success">
+                    {{session()->get('message')}}
+                    <button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true">X</button>
+                </div>
+                @endif
+            </div>
             <div class="col-lg-6">
                 <div class="section-heading">
                   <div class="line-dec"></div>
@@ -53,12 +61,14 @@
                 </div>
               </div>
               <div class="div_css">
+                
                 <table class="table_deg">
                     <tr>
                         <th>Book Name</th>
                         <th>Book Author</th>
                         <th>Book Status</th>
                         <th>Image</th>
+                        <th>Action</th>
                     </tr>
                     @foreach($data as $data)
                         <tr>
@@ -77,9 +87,21 @@
                                 @if ($data->status == 'Applied')
                                     <span style="color: white">{{$data->status}}</span>    
                                 @endif
+                                @if ($data->status == 'Cancelled')
+                                    <span style="color: grey;">{{$data->status}}</span>    
+                                @endif
                             </td>
                             <td>
                                 <img class="book_img" src="/book/{{$data->book->book_img}}" alt="">
+                            </td>
+                            <td>
+                                @if ($data->status == 'Applied')
+                                    <a class="btn btn-danger" href="{{url('cancel_req',$data->id)}}">Cancel</a>
+                                @else
+                                    <p style="color: white; font-weight: bold;">Not Allowed</p>
+                                
+                                @endif
+                                
                             </td>
                         </tr>
                     @endforeach
