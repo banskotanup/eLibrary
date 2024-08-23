@@ -38,12 +38,13 @@
 
         .img_auther{
             width: 80px;
+            height: 100px;
             border-radius: 50%;
         }
 
         .img_book{
             width: 80px;
-            height: auto;
+            height: 100px;
         }
 
         .td_css{
@@ -100,10 +101,10 @@
                         </td>
                         <td class="td_css">
                             <div>
-                                <a style="height: 40px; width:90px; href="{{url('edit_book',$book->id)}}" class="btn btn-info">Update</a>
+                                <a href="{{url('edit_book',$book->id)}}" class="btn btn-info" style="height: 40px; width:90px;">Update</a>
                             </div>
                             <div style="margin-top:4px;">
-                                <a style="height: 40px; width:90px; onclick="confirmation(event)" href="{{url('book_delete',$book->id)}}" class="btn btn-danger">Delete</a>
+                                <a onclick="confirmation(event)" href="{{url('book_delete',$book->id)}}" class="btn btn-danger" style="height: 40px; width:90px;">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -112,27 +113,28 @@
             </div>
           </div>
         </div>
+        
       </div>
         @include('admin.footer')
 
         <script type="text/javascript">
-                function confirmation(ev) { 
-                ev.preventDefault(); 
-                var urlToRedirect = ev.currentTarget.getAttribute('href'); 
-                console.log(urlToRedirect); 
-                swal({ 
-                title: "Are you sure to Delete this", 
-                text: "You will not be able to revert this!", 
-                icon: "warning",
-                buttons: true, 
-                dangerMode: true, 
-                })
-            .then((willCancel) => { 
-                if (willCancel) { 
-                window.location.href= urlToRedirect; 
-                }
-            });
+            function confirmation(ev) { 
+              ev.preventDefault(); 
+              var urlToRedirect = ev.currentTarget.getAttribute('href'); 
+              console.log(urlToRedirect); 
+            swal({ 
+            title: "Are you sure to Delete this", 
+            text: "You will not be able to revert this!", 
+            icon: "warning",
+            buttons: true, 
+            dangerMode: true, 
+            })
+          .then((willCancel) => { 
+            if (willCancel) { 
+              window.location.href= urlToRedirect; 
             }
-        </script>
+          });
+        }
+    </script>
   </body>
 </html>

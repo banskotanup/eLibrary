@@ -18,19 +18,17 @@
     <div class="currently-market">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6">
-              <div class="section-heading">
-                <div class="line-dec"></div>
-                <h2><em>Items</em> Currently In The Market.</h2>
-              </div>
-            </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" style="margin-top: 100px;">
               <div class="filters">
                 <ul>
                   <li data-filter="*"  class="active">All Books</li>
-                  <li data-filter=".msc">Popular</li>
-                  <li data-filter=".dig">Latest</li>  
-                  
+
+                  @foreach($category as $category)
+                  <li>
+                    <a href="{{url('cat_search',$category->id)}}" style="color: white;" class="a_act">{{$category->cat_title}}</a>
+                  </li>
+                  @endforeach
+
                 </ul>
               </div>
             </div>
@@ -50,13 +48,13 @@
                 @foreach ($data as $data)
                   <div class="col-lg-6 currently-market-item all msc">
                     <div class="item">
-                      <div class="left-image">
-                        <img src="/book/{{$data->book_img}}" alt="" style="border-radius: 20px; min-width: 195px;">
+                      <div class="left-image h-100">
+                        <img src="/book/{{$data->book_img}}" alt="" style="border-radius: 20px; width: 195px; height: 250px;">
                       </div>
-                      <div class="right-content">
+                      <div class="right-content" style="height: 400px;">
                         <h4>{{$data->title}}</h4>
                         <span class="author">
-                          <img src="/auther/{{$data->auther_img}}" alt="" style="max-width: 50px; border-radius: 50%;">
+                          <img src="/auther/{{$data->auther_img}}" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
                           <h6>{{$data->auther_name}}</h6>
                         </span>
                         <div class="line-dec"></div>
