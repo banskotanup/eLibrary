@@ -80,4 +80,11 @@ class HomeController extends Controller
         $data = Book::all();
         return view('home.explore',compact('data'));
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->search;
+        $data = Book::where('title','LIKE','%'.$search.'%')->orWhere('auther_name','LIKE','%'.$search.'%')->get();
+        return view('home.explore',compact('data'));
+    }
 }
