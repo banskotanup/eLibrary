@@ -74,4 +74,10 @@ class HomeController extends Controller
             return redirect()->back()->with('message','Book borrow request cancelled successfully');
         }
     }
+
+    public function explore()
+    {
+        $data = Book::all();
+        return view('home.explore',compact('data'));
+    }
 }
