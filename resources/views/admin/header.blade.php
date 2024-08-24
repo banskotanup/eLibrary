@@ -13,7 +13,7 @@
     </div>
     <div class="container-fluid d-flex align-items-center justify-content-between">
       <div class="navbar-header">
-        <!-- Navbar Header--><a href="index.html" class="navbar-brand">
+        <!-- Navbar Header--><a href="{{url('/home')}}" class="navbar-brand">
           <div class="brand-text brand-big visible"><strong class="text-primary">e</strong><strong>Library</strong></div>
           <div class="brand-text brand-sm"><strong class="text-primary">e</strong><strong>L</strong></div></a>
         <!-- Sidebar Toggle Btn-->

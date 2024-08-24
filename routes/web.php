@@ -32,6 +32,7 @@ route::get('/book_delete/{id}',[AdminController::class, 'book_delete'])->middlew
 route::get('/edit_book/{id}',[AdminController::class, 'edit_book'])->middleware('is_admin');
 route::post('/update_book/{id}',[AdminController::class, 'update_book'])->middleware('is_admin');
 route::get('/book_details/{id}',[HomeController::class, 'book_details']);
+route::get('/book_dtl',[HomeController::class, 'book_dtl']);
 route::get('/borrow_books/{id}',[HomeController::class, 'borrow_books']);
 route::get('/borrow_request',[AdminController::class, 'borrow_request'])->middleware('is_admin');
 route::get('/approve_book/{id}',[AdminController::class, 'approve_book'])->middleware('is_admin');

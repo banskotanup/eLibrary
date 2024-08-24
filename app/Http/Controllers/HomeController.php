@@ -22,6 +22,12 @@ class HomeController extends Controller
         return view('home.book_details',compact('data'));
     }
 
+    public function book_dtl()
+    {
+        $data = Book::all();
+        return view('home.book_dtl',compact('data'));
+    }
+
     public function borrow_books($id)
     {
         $data = Book::find($id);
