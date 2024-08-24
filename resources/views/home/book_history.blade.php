@@ -90,6 +90,9 @@
                                 @if ($data->status == 'Cancelled')
                                     <span style="color: grey;">{{$data->status}}</span>    
                                 @endif
+                                @if ($data->status == 'Pending-Return-Verification')
+                                    <span style="color: skyblue;">{{$data->status}}</span>    
+                                @endif
                             </td>
                             <td>
                                 <img class="book_img" src="/book/{{$data->book->book_img}}" alt="">
@@ -97,6 +100,8 @@
                             <td>
                                 @if ($data->status == 'Applied')
                                     <a class="btn btn-danger" href="{{url('cancel_req',$data->id)}}">Cancel</a>
+                                @elseif ($data->status == 'Approved')
+                                <a class="btn btn-warning" href="{{url('ret_books',$data->id)}}">Return</a>
                                 @else
                                     <p style="color: white; font-weight: bold;">Not Allowed</p>
                                 

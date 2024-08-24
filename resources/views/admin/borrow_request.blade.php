@@ -85,6 +85,9 @@
                       @if ($data->status == 'Cancelled')
                           <span style="color: grey;">{{$data->status}}</span>    
                       @endif
+                      @if ($data->status == 'Pending-Return-Verification')
+                          <span style="color: skyblue;">{{$data->status}}</span>    
+                      @endif
                     </td>
                     <td class="td_css">
                       @if ($data->status == 'Applied')
@@ -94,9 +97,10 @@
                         <div style="margin-top:4px;">
                           <a style="height: 40px; width:90px;" href="{{url('rejected_book',$data->id)}}" class="btn btn-danger">Reject</a>
                         </div>
+                      @elseif($data->status == 'Pending-Return-Verification')
                         <div style="margin-top:4px;">
                           <a style="height: 40px; width:90px;" href="{{url('return_book',$data->id)}}" class="btn btn-info">Returned</a>
-                        </div>         
+                        </div>        
                       @else
                           <p style="color: white; font-weight: bold;">Not Allowed</p>
                                 

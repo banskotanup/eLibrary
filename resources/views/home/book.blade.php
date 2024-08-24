@@ -22,10 +22,10 @@
             @foreach ($data as $data)
               <div class="col-lg-6 currently-market-item all msc">
                 <div class="item">
-                  <div class="left-image">
+                  <div class="left-image" style="height: 400px;">
                     <img src="/book/{{$data->book_img}}" alt="" style="border-radius: 20px; width: 195px; height: 250px;">
                   </div>
-                  <div class="right-content">
+                  <div class="right-content" style="height: 400px;">
                     <h4>{{$data->title}}</h4>
                     <span class="author">
                       <img src="/auther/{{$data->auther_img}}" style="width: 50px; height: 50px; border-radius: 50%;">

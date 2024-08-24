@@ -75,6 +75,16 @@ class HomeController extends Controller
             return redirect()->back()->with('message','Book borrow request cancelled successfully');
         }
     }
+    public function ret_books($id)
+    {
+        $data = Borrow::find($id);
+        $status = $data->status;
+        if ($status == 'Approved') {
+            $data->status = 'Pending-Return-Verification';
+            $data->save();
+            return redirect()->back()->with('message','Book returned successfully');
+        }
+    }
 
     public function explore()
     {
